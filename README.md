@@ -1,2 +1,3 @@
 # Training-Website-ReactJS
-Création d'un site web à l'aide d'un tuto Youtube afin de m'entrainer
+Création d'un site web à l'aide de cette <a href="https://youtu.be/QwarZBtFoFA">vidéo</a> 
+

@@ -2,6 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import Menu from './pages/Menu';
+import About from './pages/About';
 // En gros BrowserRouter c'est pour afficher des liens
 // directement sur la page sans modifier tout le contenu
 
@@ -13,6 +15,7 @@ import Footer from './components/Footer';
 // Exemple si au path "/" je veux indiquer Hello World
 // alors au /welcome je n'aurai pas Hello World
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -23,7 +26,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        
         <Footer />
       </Router>
     </div>
