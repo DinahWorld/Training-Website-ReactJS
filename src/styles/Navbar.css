@@ -1,0 +1,116 @@
+.navbar {
+    /* pour la taille de la boite */
+    width: 100%;
+    height: 100px;
+    background-color: #121619;
+    /* Affiche un élément comme un bloc flexible */
+    /* En gros quand on modifie la fenetre sa sera
+    flex */
+    display: flex;
+    /* La direction suit une ligne*/
+    flex-direction: row;
+}
+
+.navbar .leftSide {
+    /*il ne va occuper que 50% de l'écran*/
+    /* Il y aura toujours de l'espace entre 
+    lui et les autres */
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+.navbar .leftSide img{
+    width: 70px;
+}
+
+.navbar .rightSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    /* Alignement des élements dans le conteneur */
+    align-items: center;
+    /* Positionnement des élémnts */
+    justify-content: center;
+}
+
+/* Texte */
+.navbar a {
+    color: white;
+    /* On enleve toute les décorations */
+    text-decoration: none;
+    margin: 20px;
+}
+
+.navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    /* Lorsque je passe ma souris sur les boutons */
+    cursor: pointer;
+}
+navbar .rightSide svg {
+  font-size: 40px;
+}
+
+.navbar #open {
+    padding-left: 0px;
+}
+
+.navbar #open img {
+    display: none;
+}
+
+.navbar #open img {
+    display: none;
+}
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* En gros on applique cette methode que pour screen et lorsque 
+    Le max width = 900px */
+    
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+}  
+
+/* si la taille de la fenetre est inférieur a 600px alors 
+    on affiche pas le texte */
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  .navbar .rightSide button {
+    display: inherit;
+  }
+}
+  
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+  .hiddenLinks {
+    display: none;
+  }
+}
